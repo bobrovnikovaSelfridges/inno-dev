@@ -14,6 +14,7 @@ const selectedSize = "xs";
 
 export const Card = ({ data }: Props) => {
   const { states } = useAppContext();
+  const firstName = data[1].name.split(" ")[0];
   return (
     <ContentRoot
       id={data[1].name + "_" + data[1].photo + "_"}
@@ -24,12 +25,15 @@ export const Card = ({ data }: Props) => {
     >
       <Image src={data[1].photo} />
 
-      {/* <ProductButtons data={data} /> */}
-
       <TextContent size={selectedSize}>
         <Title size={selectedSize}>{data[1].name}</Title>
+
+        <Text size={selectedSize}>{`Important facts about ${firstName}:`}</Text>
+
         {data[1].facts && <Text size={selectedSize}>{data[1].facts}</Text>}
-        {data[1].local && <Text size={selectedSize}>{data[1].local}</Text>}
+        <Text
+          size={selectedSize}
+        >{`${firstName} is from: ${data[1].local}`}</Text>
       </TextContent>
     </ContentRoot>
   );
@@ -37,24 +41,14 @@ export const Card = ({ data }: Props) => {
 
 const TextContent = styled.div<{ size: ComponentSize }>`
   height: 100%;
-
+  padding-top: 1rem;
   > [id="price"] {
     text-align: right;
   }
 
-  ${({ size }) => {
-    switch (size) {
-      case "xs":
-        return `
-         
-        > h1 {
-          margin-top: 0;
-        }`;
-
-      default:
-        return ``;
-    }
-  }}
+  > h1 {
+    margin-top: 0;
+  }
 `;
 
 const commonRootSet = `

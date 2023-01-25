@@ -42,10 +42,12 @@ export const config: Config = {
       name: "Shazad Ahmed",
       photo: "./images/Shazad.png",
       title: "Delivery Lead",
-      local: "******",
+      local: "UK 🇬🇧",
       facts: [
         "🌆 Sometimes Shazad visits Birmingham 🌆",
         "🎮 makes wonderful retros 🎮",
+        "Shazad loves Holidays and Cars.",
+        "Shaz loves going to Dubai ",
       ],
     },
 
@@ -104,8 +106,20 @@ export const config: Config = {
     },
 
     7: {
+      name: "Sophie Ashwell",
+      photo: "./images/Sophie.png",
+      local: "Poland 🇵🇱",
+      title: "Product Principle",
+      facts: [
+        "🐕  Sophie desperately wants a sausage dog but need to wait til she has a garden 🌳🌳🌳",
+        "🧱 Sophie lives in a old textiles warehouse 🧱",
+        "🎼 Sophie's best skill is guessing the song/artist if you give her 10 seconds of a music intro 🎼",
+      ],
+    },
+
+    8: {
       name: "Joanna Bak",
-      photo: "./images/Joanna.jpeg",
+      photo: "./images/Joanna.png",
       local: "Poland 🇵🇱",
       title: "engineer",
       facts: [
@@ -114,7 +128,7 @@ export const config: Config = {
         "🍦 Joanna likes ice creams, football ⚽, pizza 🍕 and baking. ",
       ],
     },
-    8: {
+    9: {
       name: "Larisa Bobrovnikova",
       photo: "./images/Larisa.png",
       local: "Russia 🇷🇺",
