@@ -2,34 +2,33 @@ import styled from "styled-components";
 import { bps } from "../../styles/breakpoints";
 import { ComponentSize, ColleagueData } from "../../tools/types";
 import { Image } from "./image";
-import { Price } from "./price";
 import { Text } from "./text";
 import { Title } from "./title";
 import { useAppContext } from "../../context/app-context";
 
 type Props = {
-  data: ColleagueData;
+  data: [string, ColleagueData];
 };
 
-const selectedSize = "s";
+const selectedSize = "xs";
 
 export const Card = ({ data }: Props) => {
   const { states } = useAppContext();
   return (
     <ContentRoot
-      id={data.name + "_" + data.photo + "_"}
+      id={data[1].name + "_" + data[1].photo + "_"}
       onClick={() => {
         states.isModalOpen.onChange(!states.isModalOpen.value);
       }}
       size={selectedSize}
     >
-      <Image isInCard={true} size={selectedSize} src={data.photo} />
+      <Image src={data[1].photo} />
 
       {/* <ProductButtons data={data} /> */}
 
       <TextContent size={selectedSize}>
-        <Title size={selectedSize}>{data.name}</Title>
-        {data.facts && <Text size={selectedSize}>{data.facts}</Text>}
+        <Title size={selectedSize}>{data[1].name}</Title>
+        {data[1].facts && <Text size={selectedSize}>{data[1].facts}</Text>}
       </TextContent>
     </ContentRoot>
   );
@@ -42,7 +41,7 @@ const TextContent = styled.div<{ size: ComponentSize }>`
     text-align: right;
   }
 
-  ${({ size, theme }) => {
+  ${({ size }) => {
     switch (size) {
       case "xs":
         return `
@@ -76,82 +75,15 @@ const commonRootSet = `
 `;
 const ContentRoot = styled.div<{ isViewed?: boolean; size: ComponentSize }>`
   position: relative;
-  ${({ size, isViewed, theme }) => {
-    switch (size) {
-      case "xs":
-        return `
-           box-shadow: 12px 12px 2px 1px ${theme.static.boxShadow}};
-          padding: 1rem;
-          width: 12rem; 
-          ${commonRootSet};
-           ${bps.desktop} {
-          padding: 1.5rem;
-          width: 14rem; 
-          };`;
-
-      case "s":
-        return `
- ${commonRootSet};
- 
- border-radius: 5px;
- aspect-ratio: 1/1.25;
- max-width: 12rem;
- min-width: 6rem; 
- height: 22rem;
- 
- ${bps.desktop} {
- border-radius: 15px;
- max-width: 14rem; 
- };
-
- ${bps.mobile} {
- max-width: unset;
- min-width: unset:
- width: 100%;
- }
- 
- `;
-
-      case "m":
-        return `
- ${commonRootSet};
- box-shadow: 12px 12px 2px 1px ${theme.static.boxShadow}};
- width: 16rem; 
-
- ${bps.desktop} {
- width: 18rem;
- height: 26rem;
- };
- ${
-   isViewed &&
-   `transform: scale(1.05);
- height: auto;`
- }
- `;
-
-      default:
-        // l
-        return `
- max-height: 18rem;
- width: 50%;
- ${bps.desktop} {
- max-height: 22rem;
- width: 28rem;
- };
- ${
-   isViewed &&
-   `max-height: 24rem;
- transform: scale(1.05);
- height: auto;`
- }
- `;
-    }
-  }}
-
-  &:hover {
+  box-shadow: 12px 12px 2px 1px ${({ theme }) =>
+    theme.static.contentBackground}};
+  padding: 1rem;
+  width: 12rem; 
+  ${commonRootSet};
+  
     ${bps.desktop} {
-      transform: scale(1.015);
-    }
-    cursor: pointer;
-  }
-`;
+      padding: 1.5rem;
+      width: 14rem; 
+    };
+ 
+ `;

@@ -27,7 +27,7 @@ const SwiperComponent = () => {
           (el: [string, ColleagueData], id: number) => {
             return (
               <div key={`${id}_${el[1].name}`}>
-                <Card item={el} />
+                <Card data={el} />
               </div>
             );
           }

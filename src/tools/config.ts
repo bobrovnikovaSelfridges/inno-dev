@@ -9,8 +9,7 @@ export const config: Config = {
 
   uiText: {
     main: {
-      title: "Selfridges sustainable store",
-      subtitle: "Project Earth edition",
+      title: "Selfridges Innovation team",
       description: "description is a string",
     },
     cart: {
@@ -30,7 +29,7 @@ export const config: Config = {
   colleagues: {
     0: {
       name: "Katie McGowan",
-      photo: "",
+      photo: "./images/Katie.png",
       title: "Product Manager",
       facts: [
         "has amazing British accent",
@@ -41,7 +40,7 @@ export const config: Config = {
     },
     1: {
       name: "Karthik Muthumari",
-      photo: "",
+      photo: "./images/Karthik.png",
       title: "engineer",
       facts: [
         "awesome teammate",

@@ -35,7 +35,7 @@ export const Images = ({
         {images.map((img: string, idx: number) => (
           <div key={img + idx}>
             {hasNum && <Number>{idx + 1}</Number>}
-            <Image size={size} src={img} />
+            <Image src={img} />
           </div>
         ))}
       </Swiper>

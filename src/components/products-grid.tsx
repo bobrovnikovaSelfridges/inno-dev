@@ -1,16 +1,15 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { bps } from "../styles/breakpoints";
 import { config } from "../tools/config";
-import { ColleagueData, ProductData } from "../tools/types";
+import { ColleagueData } from "../tools/types";
 import { Card } from "./elements/product";
 
-export const ProductsGrid = () => {
+export const ColleaguesGrid = () => {
   return (
     <Root>
       {Object.entries(config.colleagues).map(
         (dataset: [string, ColleagueData], idx: number) => {
-          return <Card key={`${idx}${dataset[1].name}`} data={dataset[1]} />;
+          return <Card key={`${idx}${dataset[1].name}`} data={dataset} />;
         }
       )}
     </Root>

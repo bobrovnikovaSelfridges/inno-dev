@@ -10,8 +10,8 @@ export type ProductData = {
 };
 export type Texts = {
   title: string;
-  subtitle: string;
-  description: string;
+  subtitle?: string;
+  description?: string;
 };
 export type Config = {
   uiText: {

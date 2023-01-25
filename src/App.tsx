@@ -1,16 +1,15 @@
 import { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { Header } from "./components/header";
-import { ProductsGrid } from "./components/products-grid";
-import { Text } from "./components/elements/text";
-import { Title } from "./components/elements/title";
+
 import { AppContext } from "./context/app-context";
 import { config } from "./tools/config";
 import { getTheme } from "./theme/getTheme";
 import { Cart, ProductData, ThemedStyles, Wishlist } from "./tools/types";
 import "./assets/fonts/index.css";
 import SwiperComponent from "./components/swiper";
-import { Button } from "./components/elements/button";
+import { Title } from "./components/elements/title";
+import { Text } from "./components/elements/text";
 
 function App() {
   const [isAnimatedModal, setAnimationOnModal] = useState(false);
@@ -91,49 +90,24 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppContext.Provider value={initialValues}>
-        {/* <Modal /> */}
-        {PE_ICON()}
         <Root>
-          {/* <Header /> */}
-          {/* <BttnWrap onClick={() => setVisibility(true)}>
-            <Button handler={() => setVisibility(true)}>Check your luck</Button>
-          </BttnWrap> */}
-          <ProductsGrid items={config.colleagues} />
-          <Wrap
-            data-a={isSelectionVisible}
-            style={{
-              transform: isSelectionVisible ? "scaleY(1)" : "scaleY(0)",
-            }}
-          >
-            <SwiperComponent />
-          </Wrap>
-          {/* 
-          <ProductsGrid productGridIndex={0} />
-          <ProductsGrid productGridIndex={1} />
-          <ProductsGrid productGridIndex={2} />
-          <Title size={"m"}>Title M size </Title>
-          <Text size={"m"}>
-            M-size text: Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
-          </Text>
+          <Header />
+          <SwiperComponent />
 
           <Title size={"l"}>Title L size </Title>
-          <Text size={"l"}>
-            L-size text: Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
-          </Text> */}
+          <Text size={"s"}>
+            Innovation team is focused on innovative approach. Those are a
+            couple of our recent projects:
+          </Text>
+          <a href="https://www.selfridges.com/GB/en/features/articles/selfridges-guideto/gifts/">
+            Christmas gift Guide
+          </a>
+
+          <a href="https://vip-signup.selfridges.com/?h=fa8enAlJkN4ItQagHEXRgP6dIiJJ7gCAzelAGhPpSiM=">
+            VIP sign up form
+          </a>
+
+          <p> and currently we are working on PathFinder project </p>
         </Root>
       </AppContext.Provider>
     </ThemeProvider>
@@ -183,7 +157,6 @@ export default App;
 
 const Root = styled.div`
   color: ${({ theme }) => theme.static.text};
-  background-color: ${({ theme }) => theme.static.contentBackground};
   font-family: poppins, "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   margin: 0;
@@ -194,12 +167,4 @@ const Root = styled.div`
   * {
     box-sizing: border-box;
   }
-`;
-const Wrap = styled.div`
-  transition: 1s ease-in-out all;
-`;
-const BttnWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
