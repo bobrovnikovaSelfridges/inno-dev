@@ -46,7 +46,6 @@ export type PalletteType = {
   contentBorder?: string;
   svgs?: string;
   boxShadow?: string;
-  projectEarth?: string;
 };
 export type PallettesGroupType = {
   static: PalletteType;

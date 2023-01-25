@@ -79,7 +79,7 @@ const StyledSwiper = styled.div`
   }
 
   .swiper-pagination-bullet-active {
-    color: ${({ theme }) => theme.hover.projectEarth};
+    color: ${({ theme }) => theme.hover.contentBackground};
   }
 
   .swiper-pagination {

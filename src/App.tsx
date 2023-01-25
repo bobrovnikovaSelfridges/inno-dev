@@ -94,38 +94,31 @@ function App() {
           <Header />
           <SwiperComponent />
 
-          <Title size={"l"}>Title L size </Title>
+          <Title size={"l"}>Our work </Title>
           <Text size={"s"}>
             Innovation team is focused on innovative approach. Those are a
             couple of our recent projects:
           </Text>
-          <a href="https://www.selfridges.com/GB/en/features/articles/selfridges-guideto/gifts/">
-            Christmas gift Guide
-          </a>
-
-          <a href="https://vip-signup.selfridges.com/?h=fa8enAlJkN4ItQagHEXRgP6dIiJJ7gCAzelAGhPpSiM=">
-            VIP sign up form
-          </a>
-
-          <p> and currently we are working on PathFinder project </p>
+          <ul>
+            <li>
+              <a href="https://www.selfridges.com/GB/en/features/articles/selfridges-guideto/gifts/">
+                Christmas gift Guide
+              </a>
+            </li>
+            <li>
+              <a href="https://vip-signup.selfridges.com/?h=fa8enAlJkN4ItQagHEXRgP6dIiJJ7gCAzelAGhPpSiM=">
+                VIP sign up form
+              </a>
+            </li>
+            <li>
+              <p> and currently we are working on PathFinder project </p>
+            </li>
+          </ul>
         </Root>
       </AppContext.Provider>
     </ThemeProvider>
   );
 }
-
-const PE_ICON = () => (
-  <PEImg src="./PE_ICON_SVG.svg" alt="A Rectangle Image with SVG" />
-);
-
-const PEImg = styled.img`
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  z-index: 2;
-  height: 10rem;
-  width: 10rem;
-`;
 
 const triggerModalAnimation = (
   setAnimationOnModal: React.Dispatch<React.SetStateAction<boolean>>

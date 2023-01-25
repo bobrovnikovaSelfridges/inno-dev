@@ -29,6 +29,7 @@ export const Card = ({ data }: Props) => {
       <TextContent size={selectedSize}>
         <Title size={selectedSize}>{data[1].name}</Title>
         {data[1].facts && <Text size={selectedSize}>{data[1].facts}</Text>}
+        {data[1].local && <Text size={selectedSize}>{data[1].local}</Text>}
       </TextContent>
     </ContentRoot>
   );
@@ -82,8 +83,7 @@ const ContentRoot = styled.div<{ isViewed?: boolean; size: ComponentSize }>`
   ${commonRootSet};
   
     ${bps.desktop} {
-      padding: 1.5rem;
-      width: 14rem; 
+       width: 14rem; 
     };
  
  `;

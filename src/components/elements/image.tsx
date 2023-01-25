@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { bps } from "../../styles/breakpoints";
+import { config } from "../../tools/config";
 import { ComponentSize } from "../../tools/types";
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 };
 
 export const Image = ({ src }: Props) => {
-  const tempImg = src; // || config.images.default;
+  const tempImg = src || config.images.default;
 
   return <ImageInCard size={"xs"} src={tempImg} />;
 };

@@ -5,20 +5,18 @@ type Names = string | "monochrome" | "autumn";
 export const colorThemes: { [key: Names]: PallettesGroupType } = {
   monochrome: {
     static: {
-      projectEarth: "rgb(1,183,35, .5)",
       text: "black",
-      links: "rgba(117, 165, 175, 1)",
-      buttonText: "rgba(117, 165, 175, 1)",
-      buttonBorder: "rgba(117, 165, 175, 1)",
-      contentBorder: "rgba(117, 165, 175, 1)",
+      links: "black",
+      buttonText: "black",
+      buttonBorder: "black",
+      contentBorder: "black",
       contentBackground: "#ffe256",
-      boxShadow: "rgb(1,183,35, .5)",
+      boxShadow: "black",
       svgs: "black",
-      buttonBackground: "rgb(1,183,35, .2)",
+      buttonBackground: "black",
     } as PalletteType,
     //  small rgba change suggested
     hover: {
-      projectEarth: "rgb(1,183,35,1)",
       text: "black",
       links: "rgba(117, 165, 175, .5)",
       buttonText: "rgba(117, 165, 175, .5)",
