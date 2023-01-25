@@ -43,11 +43,7 @@ const Root = styled.p<{ lineLimit: number; size: ComponentSize }>`
   -webkit-box-orient: vertical;  
   overflow: hidden;
   `}
-  margin: 1rem 0 .5rem;
+  margin: .5rem 0 .25rem;
   font-size: 14px;
-  line-height: 14px;
-  ${bps.desktop} {
-    font-size: 14px;
-    line-height: 17px;
-  }
+  line-height: 17px;
 `;

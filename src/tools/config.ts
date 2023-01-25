@@ -32,9 +32,9 @@ export const config: Config = {
       photo: "./images/Katie.png",
       title: "Product Manager",
       facts: [
-        "has amazing British accent",
-        "lives in Hampstead",
-        "😎 🥷 is dangerously good Scrabble 🥷 😎",
+        "🎠 has amazing British accent",
+        "🏠 lives in Hampstead",
+        "🥷 is dangerously good Scrabble",
       ],
       local: "UK 🇬🇧",
     },
@@ -44,10 +44,10 @@ export const config: Config = {
       title: "Delivery Lead",
       local: "UK 🇬🇧",
       facts: [
-        "🌆 Sometimes Shazad visits Birmingham 🌆",
-        "🎮 makes wonderful retros 🎮",
-        "Shazad loves Holidays and Cars.",
-        "Shaz loves going to Dubai ",
+        "🎮 makes wonderful retros;",
+        "🎉 Shazad loves Holidays and Cars;",
+        "🌃 Shaz loves going to Dubai;",
+        "🌆 Sometimes Shazad visits Birmingham.",
       ],
     },
 
@@ -56,10 +56,10 @@ export const config: Config = {
       photo: "./images/Nataliya.png",
       title: "engineer",
       facts: [
-        "👸🏻 has hair just like Disney princess 👸🏻",
-        "🔲  loves minimalism 🔲 ",
-        "🇨🇦 lived in Canada 🥶🥶🥶",
-        "🖥️ learned computer science at the university 🖥️",
+        "👸🏻 has hair just like Disney princess;",
+        "🔲 loves minimalism;",
+        "🇨🇦🥶 lived in Canada;",
+        "🖥️ learned computer science at the university.",
       ],
       local: "Bulgaria 🇧🇬",
     },
@@ -69,9 +69,10 @@ export const config: Config = {
       title: "photo: ******, QA engineer",
       local: "Chennai, TamilNadu 🇮🇳",
       facts: [
-        "👑 has amazing smile 👑",
-        "📽️ favourite movie genres are Sci-fi and thriller 📽️ ",
-        "🐕 has a Dog called Wonder 🐕",
+        "👑 Sandy has amazing smile;",
+        "📽️ favourite movie genres are Sci-fi and thriller;",
+        "🐕 has a Dog called Wonder;",
+        "💻 She tested it all.",
       ],
     },
     4: {
@@ -80,8 +81,8 @@ export const config: Config = {
       title: "engineer",
       local: "Targu-Mures, Romania 🇷🇴",
       facts: [
-        "🐈 Bogdan likes cats, but loves dogs too!!🐕",
-        "🔎 Favourite color is red 🔴, but he has been fancying olive lately 🫒",
+        "🐈 Bogdan likes cats, but loves dogs too! ",
+        "🔴🫒 Favourite color is red, but he has been fancying olive lately.",
       ],
     },
     5: {
@@ -89,8 +90,9 @@ export const config: Config = {
       photo: "./images/Karthik.png",
       title: "engineer",
       facts: [
-        "👊 awesome teammate 👊",
-        "🥷 speaks to AWS god on behalf of the whole team 🥷",
+        "👊 awesome teammate;",
+        "👊 super professional;",
+        "🥷 speaks to AWS god on behalf of the whole team.",
       ],
       local: "India 🇮🇳",
     },
@@ -100,20 +102,20 @@ export const config: Config = {
       title: "engineer",
       local: "India 🇮🇳",
       facts: [
-        "🎥🎞️ Shawshank is his favourite movie 🎥🎞️",
-        "💐 favourite season is Spring 💐",
+        "🎥🎞️ Shawshank is his favourite movie;",
+        "💐 favourite season is Spring.",
       ],
     },
 
     7: {
       name: "Sophie Ashwell",
       photo: "./images/Sophie.png",
-      local: "Poland 🇵🇱",
+      local: "UK 🇬🇧",
       title: "Product Principle",
       facts: [
-        "🐕  Sophie desperately wants a sausage dog but need to wait til she has a garden 🌳🌳🌳",
-        "🧱 Sophie lives in a old textiles warehouse 🧱",
-        "🎼 Sophie's best skill is guessing the song/artist if you give her 10 seconds of a music intro 🎼",
+        "🐕🌳 Sophie desperately wants a sausage dog but need to wait til she has a garden;",
+        "🧱🏭 Sophie lives in a old textiles warehouse;",
+        "🎼 Sophie's best skill is guessing the song/artist if you give her 10 seconds of a music intro.",
       ],
     },
 
@@ -123,9 +125,9 @@ export const config: Config = {
       local: "Poland 🇵🇱",
       title: "engineer",
       facts: [
-        "💃 Joanna loves to dance on Fridays 💃",
-        "😎 she dances Salsa and Bachata 😎",
-        "🍦 Joanna likes ice creams, football ⚽, pizza 🍕 and baking. ",
+        "💃 Joanna loves to dance on Fridays;",
+        "😎 she dances Salsa and Bachata;",
+        "🍦 Joanna likes ice creams, football ⚽, pizza 🍕 and baking.",
       ],
     },
     9: {

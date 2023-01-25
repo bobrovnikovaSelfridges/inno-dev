@@ -51,33 +51,24 @@ const TextContent = styled.div<{ size: ComponentSize }>`
   }
 `;
 
-const commonRootSet = `
- background-color: white;
- outline: 1px solid grey;
- cursor: pointer;
- width: 100%;
- height: 100%;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- border-radius: 5px;
-
- transition: .5s ease-in-out all;
- ${bps.desktop} {
- border-radius: 15px;
- }
-
-`;
 const ContentRoot = styled.div<{ isViewed?: boolean; size: ComponentSize }>`
-  position: relative;
-  box-shadow: 12px 12px 2px 1px ${({ theme }) =>
-    theme.static.contentBackground}};
-  padding: 1rem;
-  width: 12rem; 
-  ${commonRootSet};
-  
-    ${bps.desktop} {
-       width: 14rem; 
-    };
- 
- `;
+position: relative;
+box-shadow: 12px 12px 2px 1px ${({ theme }) => theme.static.contentBackground}};
+padding: 1rem;
+width: 14rem; 
+
+background-color: white;
+outline: 1px solid grey;
+cursor: pointer;
+
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 5px;
+
+transition: .5s ease-in-out all;
+  ${bps.desktop} {
+    border-radius: 15px;
+  }
+`;

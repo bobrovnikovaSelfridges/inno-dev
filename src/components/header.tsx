@@ -30,17 +30,16 @@ const TextContainer = styled.div`
   position: relative;
   z-index: 1;
   width: calc(100%);
-  min-height: 12rem;
+  min-height: 14rem;
   margin-bottom: 1rem;
   color: white;
 
-  ${bps.desktop} {
-    height: 18rem;
-    min-height: 11rem;
-  }
   > h1 {
+    padding: 1rem;
     margin: unset;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.45);
+    font-size: 42px;
+    line-height: 1.2;
   }
 `;
 const CoverImage = styled.img`
