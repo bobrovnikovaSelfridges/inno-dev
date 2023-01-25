@@ -34,7 +34,7 @@ export const config: Config = {
       facts: [
         "🎠 has amazing British accent",
         "🏠 lives in Hampstead",
-        "🥷 is dangerously good Scrabble",
+        "🥷 is dangerously good in Scrabble",
       ],
       local: "UK 🇬🇧",
     },
