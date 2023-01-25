@@ -1,17 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
-export const horisontalSlide = keyframes`  0% {
-  0% {
-    // width: 0;
-  }
-  50% {
-    // width: 4rem;
-  }
-  100% {
-    // width: 0;
-  }`;
-
-export const animationForModal = keyframes`
+export const confetti = keyframes`
 0% {
   width: 0;
 }
@@ -23,7 +12,7 @@ export const animationForModal = keyframes`
 }
 `;
 
-export const animateModal = () =>
+export const confettiStyle = () =>
   css`
-    animation: ${animationForModal} 1s ease-in-out;
+    animation: ${confetti} 1s ease-in-out;
   `;

@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+import { StarDust } from "./star-dust";
 import { bps } from "../../styles/breakpoints";
 import { ComponentSize, ColleagueData } from "../../tools/types";
 import { Image } from "./image";
@@ -14,6 +15,7 @@ const selectedSize = "xs";
 
 export const Card = ({ data }: Props) => {
   const { states } = useAppContext();
+  const firstName = data[1].name.split(" ")[0];
   return (
     <ContentRoot
       id={data[1].name + "_" + data[1].photo + "_"}
@@ -24,66 +26,99 @@ export const Card = ({ data }: Props) => {
     >
       <Image src={data[1].photo} />
 
-      {/* <ProductButtons data={data} /> */}
-
       <TextContent size={selectedSize}>
         <Title size={selectedSize}>{data[1].name}</Title>
+
+        <Text size={selectedSize}>{`Important facts about ${firstName}:`}</Text>
+
         {data[1].facts && <Text size={selectedSize}>{data[1].facts}</Text>}
-        {data[1].local && <Text size={selectedSize}>{data[1].local}</Text>}
+        <Text
+          size={selectedSize}
+        >{`${firstName} is from: ${data[1].local}`}</Text>
       </TextContent>
+      <StarDust data-attr="dust" />
     </ContentRoot>
   );
 };
 
 const TextContent = styled.div<{ size: ComponentSize }>`
   height: 100%;
-
+  padding-top: 1rem;
   > [id="price"] {
     text-align: right;
   }
 
-  ${({ size }) => {
-    switch (size) {
-      case "xs":
-        return `
-         
-        > h1 {
-          margin-top: 0;
-        }`;
-
-      default:
-        return ``;
-    }
-  }}
+  > h1 {
+    margin-top: 0;
+  }
 `;
 
-const commonRootSet = `
- background-color: white;
- outline: 1px solid grey;
- cursor: pointer;
- width: 100%;
- height: 100%;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- border-radius: 5px;
-
- transition: .5s ease-in-out all;
- ${bps.desktop} {
- border-radius: 15px;
+const shake = keyframes`
+0% {
+  transform: rotate(0);
  }
-
+50%{
+  transform: rotate(1deg);
+}
+100% {
+  transform: rotate(0); 
+  height: 0;
+}
 `;
+
+const shakeAnimation = () =>
+  css`
+    ${shake} .5s linear alternate;
+  `;
+
+const pulse = keyframes`
+0% {
+  transform: rotate(0turn) scale(.2);
+  opacity: 1;
+}
+50% {
+  transform: rotate(5turn) scale(1.15);
+  opacity: 1;
+}
+ 100% {
+  transform: rotate(0turn) scale(1);
+  opacity: 0;
+  height: 0;
+}
+`;
+
+const animationStar = () =>
+  css`
+    ${pulse} 2s infinite alternate;
+  `;
+
 const ContentRoot = styled.div<{ isViewed?: boolean; size: ComponentSize }>`
-  position: relative;
-  box-shadow: 12px 12px 2px 1px ${({ theme }) =>
-    theme.static.contentBackground}};
-  padding: 1rem;
-  width: 12rem; 
-  ${commonRootSet};
-  
-    ${bps.desktop} {
-       width: 14rem; 
-    };
- 
- `;
+position: relative;
+box-shadow: 12px 12px 2px 1px ${({ theme }) => theme.static.contentBackground}};
+padding: 1rem;
+width: 14rem; 
+
+background-color: white;
+outline: 1px solid grey;
+cursor: pointer;
+
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 5px;
+
+transition: .5s ease-in-out all;
+  ${bps.desktop} {
+    border-radius: 15px;
+  }
+
+  :hover {
+    transition: 0.5s ease-in-out all;
+    animation: ${shakeAnimation};
+
+    svg {
+      animation: ${animationStar};
+    }
+  }
+`;

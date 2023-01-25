@@ -19,7 +19,7 @@ const ImageInCard = styled.img<{ size?: ComponentSize }>`
   margin-left: -1rem;
   margin-top: -1rem;
 
-  height: 10rem;
+  height: 12rem;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 
