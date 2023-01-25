@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+import { StarDust } from "./star-dust";
 import { bps } from "../../styles/breakpoints";
 import { ComponentSize, ColleagueData } from "../../tools/types";
 import { Image } from "./image";
@@ -35,6 +36,7 @@ export const Card = ({ data }: Props) => {
           size={selectedSize}
         >{`${firstName} is from: ${data[1].local}`}</Text>
       </TextContent>
+      <StarDust data-attr="dust" />
     </ContentRoot>
   );
 };
@@ -50,6 +52,45 @@ const TextContent = styled.div<{ size: ComponentSize }>`
     margin-top: 0;
   }
 `;
+
+const shake = keyframes`
+0% {
+  transform: rotate(0);
+ }
+50%{
+  transform: rotate(1deg);
+}
+100% {
+  transform: rotate(0); 
+  height: 0;
+}
+`;
+
+const shakeAnimation = () =>
+  css`
+    ${shake} .5s linear alternate;
+  `;
+
+const pulse = keyframes`
+0% {
+  transform: rotate(0turn) scale(.2);
+  opacity: 1;
+}
+50% {
+  transform: rotate(5turn) scale(1.15);
+  opacity: 1;
+}
+ 100% {
+  transform: rotate(0turn) scale(1);
+  opacity: 0;
+  height: 0;
+}
+`;
+
+const animationStar = () =>
+  css`
+    ${pulse} 2s infinite alternate;
+  `;
 
 const ContentRoot = styled.div<{ isViewed?: boolean; size: ComponentSize }>`
 position: relative;
@@ -70,5 +111,14 @@ border-radius: 5px;
 transition: .5s ease-in-out all;
   ${bps.desktop} {
     border-radius: 15px;
+  }
+
+  :hover {
+    transition: 0.5s ease-in-out all;
+    animation: ${shakeAnimation};
+
+    svg {
+      animation: ${animationStar};
+    }
   }
 `;
