@@ -7,6 +7,25 @@ export const config: Config = {
     structure: "landing",
   },
 
+  projects: {
+    0: {
+      name: "Christmas gift Guide",
+      link: "https://www.selfridges.com/GB/en/features/articles/selfridges-guideto/gifts/",
+    },
+    1: {
+      name: "VIP sign up form",
+      link: "https://vip-signup.selfridges.com/?h=fa8enAlJkN4ItQagHEXRgP6dIiJJ7gCAzelAGhPpSiM=",
+    },
+    2: {
+      name: "Personal Shopper Profiles​",
+      link: "https://stylist.selfridges.com/arron-dickinson",
+    },
+    3: {
+      name: "Livestream Shopping​",
+      link: "https://www.selfridges.com/GB/en/features/liveshopping/",
+    },
+  },
+
   uiText: {
     main: {
       title: "Selfridges Innovation team",
@@ -90,9 +109,9 @@ export const config: Config = {
       photo: "./images/Karthik.png",
       title: "engineer",
       facts: [
-        "👊 awesome teammate;",
-        "👊 super professional;",
-        // "🥷 speaks to AWS god on behalf of the whole team.",
+        "👊 awesome teammate and profesional;",
+        "🏏 loves to watch cricket and wwe;",
+        "🏆 a great fan of Chennai Super Kings (CSK).",
       ],
       local: "India 🇮🇳",
     },

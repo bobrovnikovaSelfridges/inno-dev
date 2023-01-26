@@ -5,7 +5,13 @@ import { Header } from "./components/header";
 import { AppContext } from "./context/app-context";
 import { config } from "./tools/config";
 import { getTheme } from "./theme/getTheme";
-import { Cart, ProductData, ThemedStyles, Wishlist } from "./tools/types";
+import {
+  Cart,
+  ProductData,
+  Project,
+  ThemedStyles,
+  Wishlist,
+} from "./tools/types";
 import "./assets/fonts/index.css";
 import SwiperComponent from "./components/swiper";
 import { Title } from "./components/elements/title";
@@ -100,20 +106,15 @@ function App() {
             couple of our recent projects:
           </Text>
           <ul>
-            <li>
-              <a href="https://www.selfridges.com/GB/en/features/articles/selfridges-guideto/gifts/">
-                Christmas gift Guide
-              </a>
-            </li>
-            <li>
-              <a href="https://vip-signup.selfridges.com/?h=fa8enAlJkN4ItQagHEXRgP6dIiJJ7gCAzelAGhPpSiM=">
-                VIP sign up form
-              </a>
-            </li>
-            <li>
-              <p> and currently we are working on PathFinder project </p>
-            </li>
+            {Object.entries(config.projects).map((pr: [string, Project]) => {
+              return (
+                <li>
+                  <a href={pr[1].link}>{pr[1].name}</a>
+                </li>
+              );
+            })}
           </ul>
+          <p> and currently we are working on PathFinder project </p>
         </Root>
       </AppContext.Provider>
     </ThemeProvider>

@@ -13,11 +13,15 @@ export type Texts = {
   subtitle?: string;
   description?: string;
 };
+
+export type Project = { name: string; link: string };
+
 export type Config = {
   uiText: {
     main: Texts;
     cart: Texts;
   };
+  projects: Record<number, Project>;
   types: {
     header: Headers;
     footer: Footers;
