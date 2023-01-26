@@ -32,7 +32,7 @@ export const config: Config = {
       photo: "./images/Katie.png",
       title: "Product Manager",
       facts: [
-        "🎠 has amazing British accent",
+        "🎠 has an amazing British accent",
         "🏠 lives in Hampstead",
         "🥷 is dangerously good in Scrabble",
       ],
