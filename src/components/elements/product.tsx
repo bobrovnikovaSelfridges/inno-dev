@@ -29,6 +29,7 @@ export const Card = ({ data }: Props) => {
       <TextContent size={selectedSize}>
         <Title size={selectedSize}>{data[1].name}</Title>
 
+        {data[1].title && <TitleContent>{data[1].title}</TitleContent>}
         <Text size={selectedSize}>{`Important facts about ${firstName}:`}</Text>
 
         {data[1].facts && <Text size={selectedSize}>{data[1].facts}</Text>}
@@ -41,6 +42,17 @@ export const Card = ({ data }: Props) => {
   );
 };
 
+const TitleContent = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  margin: 0.25rem 0;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: underline;
+`;
 const TextContent = styled.div<{ size: ComponentSize }>`
   height: 100%;
   padding-top: 1rem;

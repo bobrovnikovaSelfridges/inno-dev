@@ -66,7 +66,7 @@ export const config: Config = {
     3: {
       name: "Sandy Vaidyanathan",
       photo: "", //"./images/Nataliya.png",
-      title: "photo: ******, QA engineer",
+      title: "QA engineer",
       local: "Chennai, TamilNadu 🇮🇳",
       facts: [
         "👑 Sandy has amazing smile;",
