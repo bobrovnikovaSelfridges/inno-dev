@@ -92,7 +92,7 @@ export const config: Config = {
       facts: [
         "👊 awesome teammate;",
         "👊 super professional;",
-        "🥷 speaks to AWS god on behalf of the whole team.",
+        // "🥷 speaks to AWS god on behalf of the whole team.",
       ],
       local: "India 🇮🇳",
     },
