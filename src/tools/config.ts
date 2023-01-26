@@ -69,7 +69,7 @@ export const config: Config = {
       title: "QA engineer",
       local: "Chennai, TamilNadu 🇮🇳",
       facts: [
-        "👑 Sandy has amazing smile;",
+        "👑 Sandy has an amazing smile;",
         "📽️ favourite movie genres are Sci-fi and thriller;",
         "🐕 has a Dog called Wonder;",
         "💻 She tested it all.",
@@ -113,8 +113,8 @@ export const config: Config = {
       local: "UK 🇬🇧",
       title: "Product Principle",
       facts: [
-        "🐕🌳 Sophie desperately wants a sausage dog but need to wait til she has a garden;",
-        "🧱🏭 Sophie lives in a old textiles warehouse;",
+        "🐕🌳 Sophie desperately wants a sausage dog but need to wait till she has a garden;",
+        "🧱🏭 Sophie lives in an old textiles warehouse;",
         "🎼 Sophie's best skill is guessing the song/artist if you give her 10 seconds of a music intro.",
       ],
     },
